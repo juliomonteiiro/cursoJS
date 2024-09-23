@@ -1,25 +1,22 @@
-function tabuada(){
-    let num = document.getElementById('textn')
-    let tab = document.getElementById('seltab')
+let num = document.querySelector('input#fnum')
+let tab = document.querySelector('select#seltab')
 
-    if(num.value.length == 0){
+
+function tabuada(){
+
+    if(Number(num.value.length) == 0){
     
-        alert('Por favor, digite um número!')
+        window.alert('Por favor, digite um número!')
 
     }else{
 
         let n = Number(num.value)
-        let c = 1
-        tab.innerHTML = ' '
+        tab.innerHTML = ''
 
-        while(c <= 10){
+        for(let c =1; c<=10; c++){
             let item = document.createElement('option')
-            let r = n*c
-            item.text = `${n} x ${c} = ${r}`
-            item.value = `tab${c}`
+            item.text = `${n} x ${c} = ${n*c}`
             tab.appendChild(item)
-            c++
         }
-
     }
-}   
+}  

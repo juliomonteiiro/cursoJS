@@ -18,6 +18,10 @@ section{
     margin: auto;
 }    
 
+select#seltab{
+    width: 150px;
+}
+
 footer{
     color: #fff;
     text-align: center;
