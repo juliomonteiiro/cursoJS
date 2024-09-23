@@ -12,8 +12,14 @@ function contar(){
         var f = Number(fim.value)
         var p = Number(pas.value)
         
-        for (var c = i; c<=f;c+=p){
-            res.innerHTML += ` ${c} \u{1F449}` 
+        if(i<f){
+            for (var c = i; c<=f;c+=p){
+               res.innerHTML += ` ${c} \u{1F449}` 
+            }
+        } else {
+            for (var c = i; c>=f;c-=p){
+                res.innerHTML += ` ${c} \u{1F449}` 
+            }
         }
 
         res.innerHTML += `\u{1F3C1}`
